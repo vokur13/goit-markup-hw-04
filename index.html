@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Сначала нормализатор -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <!-- Потом пользовательсткие стили -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <!--Навигация на другие страницы-->
+        <div id="header" class="container">
+          <a class="studio-logo link" href="./index.html"
+            ><span class="web-effect">Web</span>Studio</a
+          >
+          <ul class="list">
+            <li class="item"><a class="studio-nav link current" href="./index.html">Студия</a></li>
+            <li class="item"><a class="studio-nav link" href="./portfolio.html">Портфолио</a></li>
+            <li class="item"><a class="studio-nav link" href="">Контакты</a></li>
+          </ul>
+          <ul class="list contacts">
+            <li class="item">
+              <a class="studio-contacts link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="item">
+              <a class="studio-contacts link" href="tel:+380961111111">+38 096 111 11 11</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!--Уникальный контент страницы-->
+      <section class="principal-section">
+        <div class="container">
+          <!--Рекламный баннер и афиша (блок-герой)-->
+          <h1 class="principal-section-title">
+            Эффективные решения <br />
+            для вашего бизнеса <br />
+          </h1>
+          <button class="order-button" type="button">Заказать услугу</button>
+        </div>
+      </section>
+
+      <section class="section features profile">
+        <div id="features" class="container upper">
+          <h2 class="section-title visually-hidden">Наши преимущества</h2>
+          <!--Наши преимущества, скрытый заголовок-->
+          <ul class="features list">
+            <li class="item">
+              <h3 class="title">Внимание к деталям</h3>
+              <p class="features-p-style">
+                Идейные соображения, а также начало повседневной работы по формированию позиции.
+              </p>
+            </li>
+            <li class="item">
+              <h3 class="title">Пунктуальность</h3>
+              <p class="features-p-style">
+                Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
+              </p>
+            </li>
+            <li class="item">
+              <h3 class="title">Планирование</h3>
+              <p class="features-p-style">
+                Равным образом консультация с широким активом в значительной степени обуславливает.
+              </p>
+            </li>
+            <li class="item">
+              <h3 class="title">Современные технологии</h3>
+              <p class="features-p-style">
+                Значимость этих проблем настолько очевидна, что реализация плановых заданий.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div id="tools" class="container lower">
+          <h2 class="section-title">Чем мы занимаемся</h2>
+          <!--Чем мы занимаемся-->
+          <ul class="list">
+            <li class="item">
+              <img src="images/examples/img1.jpg" alt="Picture 1" width="370" />
+            </li>
+
+            <li class="item">
+              <img src="images/examples/img2.jpg" alt="Picture 2" width="370" />
+            </li>
+
+            <li class="item">
+              <img src="images/examples/img3.jpg" alt="Picture 3" width="370" />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section team">
+        <div class="container">
+          <h2 class="section-title">Наша команда</h2>
+          <!--Наша команда-->
+
+          <ul class="team list">
+            <li class="item">
+              <div class="card-box">
+                <img src="images/staff/staff1.jpg" alt="Product Designer" width="270" />
+              </div>
+              <div class="card-label">
+                <h3 class="title">Игорь Демьяненко</h3>
+                <p class="team-unit">Product Designer</p>
+              </div>
+            </li>
+
+            <li class="item">
+              <div class="card-box">
+                <img src="images/staff/staff2.jpg" alt="Frontend Developer" width="270" />
+              </div>
+              <div class="card-label">
+                <h3 class="title">Ольга Репина</h3>
+                <p class="team-unit">Frontend Developer</p>
+              </div>
+            </li>
+
+            <li class="item">
+              <div class="card-box">
+                <img src="images/staff/staff3.jpg" alt="Marketing" width="270" />
+              </div>
+              <div class="card-label">
+                <h3 class="title">Николай Тарасов</h3>
+                <p class="team-unit">Marketing</p>
+              </div>
+            </li>
+
+            <li class="item">
+              <div class="card-box">
+                <img src="images/staff/staff4.jpg" alt="UI Designer" width="270" />
+              </div>
+              <div class="card-label">
+                <h3 class="title">Михаил Ермаков</h3>
+                <p class="team-unit">UI Designer</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Наши Клиенты -->
+      <!-- <section class="clients">
+        <div id="clients" class="container">
+          <h2>Постоянные клиенты</h2>
+          <ul class="clients list">
+            <li class="clients-logo">
+              <a href=""><img src="./images/clients-logo/ya-and-co.svg" alt="ya-and-co-logo" /></a>
+            </li>
+            <li class="clients-logo">
+              <a href="">
+                <img
+                  src="./images/clients-logo/company-tag-line-here.svg"
+                  alt="company-tag-line-here-logo"
+                />
+              </a>
+            </li>
+            <li class="clients-logo">
+              <a href="">
+                <img src="./images/clients-logo/company.svg" alt="company-logo" />
+              </a>
+            </li>
+            <li class="clients-logo">
+              <a href="">
+                <img
+                  src="./images/clients-logo/foster-peters.svg"
+                  alt="foster-peters"
+                  width="84.44"
+                />
+              </a>
+            </li>
+            <li class="clients-logo">
+              <a href="">
+                <img src="./images/clients-logo/brand.svg" alt="brand-logo" />
+              </a>
+            </li>
+            <li class="clients-logo">
+              <a href="">
+                <img src="./images/clients-logo/company-tag-line.svg" alt="company-tag-line" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section> -->
+    </main>
+
+    <footer class="footer">
+      <!--Футер - Наши контакты-->
+      <div class="container">
+        <a class="studio-logo link" href="./index.html"
+          ><span class="web-effect">Web</span>Studio</a
+        >
+        <div class="address-box">
+          <address class="footer-address">
+            <ul class="list">
+              <li class="address-item">
+                <a
+                  class="studio-address link"
+                  href="https://www.google.com/maps/place/бул.+Леси+Украинки,+26,+Киев,+02000"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer"
+                  >г. Киев, пр-т Леси Украинки, 26</a
+                >
+              </li>
+              <li class="address-item">
+                <a class="studio-contacts link" href="mailto:info@example.com">info@example.com</a>
+              </li>
+              <li class="address-item">
+                <a class="studio-contacts link" href="tel:+380991111111">+38 099 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+
+        <!-- Задание #4
+      <div>
+        <b>присоединяйтесь</b>
+        <ul>
+          <li><a href="" aria-label="Facebook link">Facebook</a></li>
+          <li><a href="" aria-label="Twitter link">Twitter</a></li>
+          <li><a href="" aria-label="Instagram link">Instagram</a></li>
+          <li><a href="" aria-label="LinkedIn link">LinkedIn</a></li>
+        </ul>
+      </div> -->
+        <!-- Задание № 6-7
+        <div>
+          <b class="suscribe">Подпишитесь на рассылку</b>
+          <button class="subscribe-btn" type="button">Подписаться</button>
+        </div> -->
+        <!-- Задание № 6-7
+      <p>&copy; WebStudio, Inc. 2022.</p> -->
+      </div>
+    </footer>
+  </body>
+</html>
