@@ -5,6 +5,7 @@
 /* Основной цвет фона: #FFFFFF */
 /* Цвет фона вторичный: #F5F4FA */
 /* Минорный цвет фона: #EEEEEE */
+/* Цвет фона Hero */
 /* Белый: rgba(255, 255, 255, 1) */
 /* Цвет фона Footer #2F303A */
 /* Цвет рамки хедера #ECECEC */
@@ -17,6 +18,7 @@
   --basic-backgroud-color: #ffffff;
   --background-color: #f5f4fa;
   --minor-bgc: #eeeeee;
+  --hero-bgc: #2f303a;
   --footer-bgc: #2f303a;
   --white-color: #fff;
   --black-color: #212121;
@@ -55,6 +57,9 @@ h5,
 h6,
 p {
   margin: 0;
+}
+h1 {
+  margin-bottom: 30px;
 }
 img {
   display: block;
@@ -125,10 +130,7 @@ address {
   color: var(--white-color);
 }
 .principal-section {
-  background-color: rgba(47, 48, 58, 1);
-}
-.principal-section .thumb {
-  background-image: url('../images/banner/Img.jpg');
+  background-color: var(--hero-bgc);
 }
 .order-button {
   background: var(--accent-color);
@@ -165,6 +167,7 @@ address {
 /* Features */
 .features .title {
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--title-text-color);
@@ -201,10 +204,6 @@ address {
   color: var(--white-color);
   display: inline-block;
   margin-bottom: 20px;
-}
-.footer .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 .address-item:not(:last-child) {
   margin-bottom: 9px;
@@ -292,7 +291,7 @@ address {
   padding: 0;
   margin: 0;
 }
-#header.container {
+.intro.container {
   display: flex;
   align-items: center;
 }
@@ -312,9 +311,6 @@ address {
   display: flex;
   margin-left: auto;
 }
-.list.contacts > .item + .item {
-  margin-left: 50px;
-}
 .section-title {
   padding: 0;
   margin: 0;
@@ -327,56 +323,51 @@ address {
   padding: 0;
   margin: 0;
 }
+.principal-section {
+  padding: 200px 0px;
+}
 .principal-section .container {
   text-align: center;
 }
-.principal-section-title {
-  margin-top: 0px;
-  margin-bottom: 30px;
-}
 .order-button {
-  min-width: 200px;
-  height: 50px;
   align-items: center;
   text-align: center;
   display: inline-block;
-  border: 1px solid transparent;
+  border: none;
   border-radius: 4px;
   padding: 10px 32px;
 }
 .section.features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 99px;
+  padding-bottom: 99px;
 }
 .features.list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 .features.list > .item {
-  width: calc((100% - 90px) / 4);
+  flex-basis: calc((100% - 90px) / 4);
 }
-.section.features .container.upper {
-  margin-bottom: 94px;
+.features.list > .item:not(:last-child) {
+  margin-right: var(--item-gap);
+}
+.profile {
+  padding-bottom: 94px;
 }
 .container.lower .section-title {
   text-align: center;
 }
-#tools .list {
+.tools .list {
   display: flex;
   flex-wrap: wrap;
 }
-#tools .list .item {
+.tools .list .item {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 0;
 }
-#tools .list .item:nth-child(3n) {
+.tools .list .item:nth-child(3n) {
   margin-right: 0;
-}
-
-.section.team .section-title {
-  text-align: center;
 }
 .features.list .title {
   margin-bottom: 10px;
@@ -384,9 +375,12 @@ address {
 .profile .section-title {
   margin-bottom: 50px;
 }
-.section.team > .container {
+.section.team {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+.section.team .section-title {
+  text-align: center;
 }
 .section.team .section-title {
   margin-bottom: 50px;
@@ -399,20 +393,14 @@ address {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-
-  margin-right: calc(-1 * var(--item-gap));
-  margin-bottom: calc(-1 * var(--item-gap));
 }
 .team.list > .item {
   box-shadow: var(--team-list-item-shadow);
   border-radius: 0px 0px 4px 4px;
-  overflow: hidden;
   text-align: center;
-
-  flex-basis: calc(100% / var(--team-item-n-row) - (var(--team-item-n-row)-1));
-
+}
+.team.list > .item:not(:last-child) {
   margin-right: var(--item-gap);
-  margin-bottom: var(--item-gap);
 }
 .team .title {
   margin-bottom: 10px;
@@ -420,6 +408,10 @@ address {
 .clients.list {
   display: flex;
   flex-wrap: wrap;
+}
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .subscribe-btn {
   border: 1px solid transparent;
@@ -433,24 +425,22 @@ address {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-#filter {
-  margin-bottom: 34px;
-}
 .projects-filter.list {
   display: flex;
   justify-content: center;
+  margin-bottom: 34px;
 }
-.projects-filter.list > .item {
+.filter-item {
   margin-right: 8px;
+  /* padding: 5px 22px; */
+}
+.filter-button {
+  padding: 5px 22px;
 }
 .projects-filter.list > .item:nth-child(5) {
   margin-right: 0;
 }
-.filter-button {
-  padding-left: 22px;
-  padding-right: 22px;
-}
-#portfolio {
+.portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
 }
