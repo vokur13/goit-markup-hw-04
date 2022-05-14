@@ -127,6 +127,9 @@ address {
 .principal-section {
   background-color: rgba(47, 48, 58, 1);
 }
+.principal-section .thumb {
+  background-image: url('../images/banner/Img.jpg');
+}
 .order-button {
   background: var(--accent-color);
   font-family: inherit;

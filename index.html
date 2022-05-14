@@ -24,7 +24,7 @@
     <header class="header">
       <nav class="nav">
         <!--Навигация на другие страницы-->
-        <div id="header" class="container">
+        <div class="intro container">
           <a class="studio-logo link" href="./index.html"
             ><span class="web-effect">Web</span>Studio</a
           >
@@ -60,8 +60,8 @@
         </div>
       </section>
 
-      <section class="section features profile">
-        <div id="features" class="container upper">
+      <section class="section features">
+        <div class="container upper">
           <h2 class="section-title visually-hidden">Наши преимущества</h2>
           <!--Наши преимущества, скрытый заголовок-->
           <ul class="features list">
@@ -91,7 +91,10 @@
             </li>
           </ul>
         </div>
-        <div id="tools" class="container lower">
+      </section>
+
+      <section class="profile">
+        <div class="tools container lower">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <!--Чем мы занимаемся-->
           <ul class="list">
@@ -117,9 +120,7 @@
 
           <ul class="team list">
             <li class="item">
-              <div class="card-box">
-                <img src="images/staff/staff1.jpg" alt="Product Designer" width="270" />
-              </div>
+              <img src="images/staff/staff1.jpg" alt="Product Designer" width="270" />
               <div class="card-label">
                 <h3 class="title">Игорь Демьяненко</h3>
                 <p class="team-unit">Product Designer</p>
@@ -127,9 +128,7 @@
             </li>
 
             <li class="item">
-              <div class="card-box">
-                <img src="images/staff/staff2.jpg" alt="Frontend Developer" width="270" />
-              </div>
+              <img src="images/staff/staff2.jpg" alt="Frontend Developer" width="270" />
               <div class="card-label">
                 <h3 class="title">Ольга Репина</h3>
                 <p class="team-unit">Frontend Developer</p>
@@ -137,9 +136,7 @@
             </li>
 
             <li class="item">
-              <div class="card-box">
-                <img src="images/staff/staff3.jpg" alt="Marketing" width="270" />
-              </div>
+              <img src="images/staff/staff3.jpg" alt="Marketing" width="270" />
               <div class="card-label">
                 <h3 class="title">Николай Тарасов</h3>
                 <p class="team-unit">Marketing</p>
@@ -147,9 +144,7 @@
             </li>
 
             <li class="item">
-              <div class="card-box">
-                <img src="images/staff/staff4.jpg" alt="UI Designer" width="270" />
-              </div>
+              <img src="images/staff/staff4.jpg" alt="UI Designer" width="270" />
               <div class="card-label">
                 <h3 class="title">Михаил Ермаков</h3>
                 <p class="team-unit">UI Designer</p>
@@ -158,97 +153,34 @@
           </ul>
         </div>
       </section>
-
-      <!-- Наши Клиенты -->
-      <!-- <section class="clients">
-        <div id="clients" class="container">
-          <h2>Постоянные клиенты</h2>
-          <ul class="clients list">
-            <li class="clients-logo">
-              <a href=""><img src="./images/clients-logo/ya-and-co.svg" alt="ya-and-co-logo" /></a>
-            </li>
-            <li class="clients-logo">
-              <a href="">
-                <img
-                  src="./images/clients-logo/company-tag-line-here.svg"
-                  alt="company-tag-line-here-logo"
-                />
-              </a>
-            </li>
-            <li class="clients-logo">
-              <a href="">
-                <img src="./images/clients-logo/company.svg" alt="company-logo" />
-              </a>
-            </li>
-            <li class="clients-logo">
-              <a href="">
-                <img
-                  src="./images/clients-logo/foster-peters.svg"
-                  alt="foster-peters"
-                  width="84.44"
-                />
-              </a>
-            </li>
-            <li class="clients-logo">
-              <a href="">
-                <img src="./images/clients-logo/brand.svg" alt="brand-logo" />
-              </a>
-            </li>
-            <li class="clients-logo">
-              <a href="">
-                <img src="./images/clients-logo/company-tag-line.svg" alt="company-tag-line" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section> -->
     </main>
 
     <footer class="footer">
       <!--Футер - Наши контакты-->
+
       <div class="container">
         <a class="studio-logo link" href="./index.html"
           ><span class="web-effect">Web</span>Studio</a
         >
-        <div class="address-box">
-          <address class="footer-address">
-            <ul class="list">
-              <li class="address-item">
-                <a
-                  class="studio-address link"
-                  href="https://www.google.com/maps/place/бул.+Леси+Украинки,+26,+Киев,+02000"
-                  target="_blank"
-                  rel="noopener nofollow noreferrer"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
-              </li>
-              <li class="address-item">
-                <a class="studio-contacts link" href="mailto:info@example.com">info@example.com</a>
-              </li>
-              <li class="address-item">
-                <a class="studio-contacts link" href="tel:+380991111111">+38 099 111 11 11</a>
-              </li>
-            </ul>
-          </address>
-        </div>
-
-        <!-- Задание #4
-      <div>
-        <b>присоединяйтесь</b>
-        <ul>
-          <li><a href="" aria-label="Facebook link">Facebook</a></li>
-          <li><a href="" aria-label="Twitter link">Twitter</a></li>
-          <li><a href="" aria-label="Instagram link">Instagram</a></li>
-          <li><a href="" aria-label="LinkedIn link">LinkedIn</a></li>
-        </ul>
-      </div> -->
-        <!-- Задание № 6-7
-        <div>
-          <b class="suscribe">Подпишитесь на рассылку</b>
-          <button class="subscribe-btn" type="button">Подписаться</button>
-        </div> -->
-        <!-- Задание № 6-7
-      <p>&copy; WebStudio, Inc. 2022.</p> -->
+        <address class="footer-address">
+          <ul class="list">
+            <li class="address-item">
+              <a
+                class="studio-address link"
+                href="https://www.google.com/maps/place/бул.+Леси+Украинки,+26,+Киев,+02000"
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                >г. Киев, пр-т Леси Украинки, 26</a
+              >
+            </li>
+            <li class="address-item">
+              <a class="studio-contacts link" href="mailto:info@example.com">info@example.com</a>
+            </li>
+            <li class="address-item">
+              <a class="studio-contacts link" href="tel:+380991111111">+38 099 111 11 11</a>
+            </li>
+          </ul>
+        </address>
       </div>
     </footer>
   </body>
