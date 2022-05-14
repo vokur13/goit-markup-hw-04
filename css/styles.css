@@ -326,6 +326,13 @@ address {
 .principal-section {
   padding: 200px 0px;
 }
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid red;
+}
 .principal-section .container {
   text-align: center;
 }
