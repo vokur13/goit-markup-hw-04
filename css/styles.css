@@ -479,11 +479,13 @@ address {
 .projects-filter.list {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 .filter-item {
   margin-right: 8px;
-  /* padding: 5px 22px; */
+}
+.filter-item:last-of-type {
+  margin-right: 0px;
 }
 .filter-button {
   padding: 5px 22px;
@@ -508,6 +510,9 @@ address {
   );
   margin-right: var(--item-gap);
   margin-bottom: var(--item-gap);
+}
+.projects.list .title {
+  margin-bottom: 4px;
 }
 .item-card .title {
   margin-bottom: 4px;
