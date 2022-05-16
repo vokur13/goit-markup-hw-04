@@ -120,6 +120,9 @@ address {
 .studio-nav.current {
   color: var(--accent-color);
 }
+.nav .item-nav:not(:last-child) {
+  margin-right: 50px;
+}
 /* Principal section */
 .principal-section-title {
   font-weight: 900;
@@ -145,7 +148,6 @@ address {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
-  text-align: ;
   color: var(--title-text-color);
 }
 .section-title.visually-hidden,
@@ -188,7 +190,70 @@ address {
 .team-unit {
   font-size: 16px;
   line-height: 1.18;
+  margin-bottom: 16px;
 }
+/* .social-net.list {
+  display: flex;
+  align-items: center;
+} */
+/* Our Clients */
+.section.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section.clients > .container {
+  text-align: center;
+  outline: 1px solid tomato;
+}
+.clients-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.clients .item {
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.clients .item:nth-child(1) {
+  background-image: url('../images/clients-logo/ya-and-co.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.clients .item:nth-child(2) {
+  background-image: url('../images/clients-logo/company-tag-line-here.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.clients .item:nth-child(3) {
+  background-image: url('../images/clients-logo/company.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.clients .item:nth-child(4) {
+  background-image: url('../images/clients-logo/foster-peters.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.clients .item:nth-child(5) {
+  background-image: url('../images/clients-logo/brand.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.clients .item:nth-child(6) {
+  background-image: url('../images/clients-logo/company-tag-line.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.clients .section-title {
+  margin-bottom: 50px;
+}
+
 /* Footer */
 .footer .studio-contacts {
   font-style: normal;
@@ -295,9 +360,6 @@ address {
   display: flex;
   margin-left: 93px;
 }
-.nav .list > .item:not(:last-child) {
-  margin-right: 50px;
-}
 .studio-nav.link {
   display: block;
   padding-top: 32px;
@@ -306,24 +368,28 @@ address {
 .list.contacts {
   display: flex;
   margin-left: auto;
+  width: fit-content;
+  outline: 1px solid teal;
 }
-.list.contacts > .item::before {
-  display: inline-block;
+.list.contacts > .item:not(:last-child) {
+  margin-right: 50px;
+}
+.studio-contacts.link {
+  display: inline-flex;
+  align-items: center;
+}
+.studio-contacts.link::before {
   content: '';
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  margin: 2px 10px 2px 0px;
 
-  background-size: contain;
+  background-image: url('../images/icons/envelope.svg');
   background-repeat: no-repeat;
   background-position: center;
-  /* background-color: var(--primary-text-color); */
-}
-.mail::before {
-  background-image: url('../images/icons/envelope.svg');
-}
-.phone::before {
-  background-image: url('../images/icons/smartphone.svg');
+  background-size: contain;
+
+  outline: 1px solid red;
 }
 .section-title {
   padding: 0;
@@ -350,7 +416,6 @@ address {
   background-image: linear-gradient(to right, #2f303a66, #2f303a66), url('../images/banner/Img.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 .principal-section .container {
   text-align: center;
@@ -373,12 +438,19 @@ address {
 }
 .features.list > .item {
   flex-basis: calc((100% - 90px) / 4);
+
+  outline: 1px solid blue;
+}
+
+.features.list > .item * {
+  outline: 1px solid red;
 }
 .features.list > .item:not(:last-child) {
   margin-right: var(--item-gap);
 }
 .features.list > .item::before {
   display: block;
+  /* Блок задан для того, чтобы псевдоэлемент занял всю ширину родительского элемента */
   content: '';
   height: 120px;
   margin-bottom: 30px;
@@ -388,6 +460,8 @@ address {
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--background-color);
+
+  outline: 1px solid teal;
 }
 .antenna::before {
   background-image: url('../images/feat-icons/antenna\ 1.svg');
@@ -455,6 +529,29 @@ address {
 .team .title {
   margin-bottom: 10px;
 }
+.team .card-label {
+  display: block;
+}
+.team .card-label::after {
+  content: '';
+  display: block;
+  height: 44px;
+  margin-top: 16px;
+  margin-right: 0px;
+  margin-left: 0px;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  outline: 1px solid red;
+}
+.team .card-label::after {
+  background-image: url('../images/icons/instagram\ 2.svg');
+  background-position: center;
+}
+.team .card-label::after {
+  background-image: url('../images/icons/twitter.svg');
+  background-position: left 10px;
+}
 .clients.list {
   display: flex;
   flex-wrap: wrap;
@@ -462,6 +559,11 @@ address {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer .container {
+  display: flex;
+
+  outline: 1px solid white;
 }
 .subscribe-btn {
   border: 1px solid transparent;
