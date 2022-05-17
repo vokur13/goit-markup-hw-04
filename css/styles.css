@@ -55,7 +55,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul {
   margin: 0;
 }
 h1 {
@@ -219,36 +220,38 @@ address {
   padding: 16px 32px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .clients .item:nth-child(1) {
   background-image: url('../images/clients-logo/ya-and-co.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  /* background-repeat: no-repeat;
+  background-position: center; */
 }
 .clients .item:nth-child(2) {
   background-image: url('../images/clients-logo/company-tag-line-here.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  /* background-repeat: no-repeat;
+  background-position: center; */
 }
 .clients .item:nth-child(3) {
   background-image: url('../images/clients-logo/company.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  /* background-repeat: no-repeat;
+  background-position: center; */
 }
 .clients .item:nth-child(4) {
   background-image: url('../images/clients-logo/foster-peters.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  /* background-repeat: no-repeat;
+  background-position: center; */
 }
 .clients .item:nth-child(5) {
   background-image: url('../images/clients-logo/brand.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  /* background-repeat: no-repeat;
+  background-position: center; */
 }
 .clients .item:nth-child(6) {
   background-image: url('../images/clients-logo/company-tag-line.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  /* background-repeat: no-repeat;
+  background-position: center; */
 }
 .clients .section-title {
   margin-bottom: 50px;
@@ -352,37 +355,43 @@ address {
   padding: 0;
   margin: 0;
 }
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
 .intro.container {
   display: flex;
   align-items: center;
 }
-.nav .list {
+.nav .list-nav {
+  list-style: none;
   display: flex;
   margin-left: 93px;
-}
-.studio-nav.link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 0;
 }
 .list.contacts {
   display: flex;
-  margin-left: auto;
+  flex-wrap: nowrap;
   width: fit-content;
+  margin-left: auto;
   outline: 1px solid teal;
 }
+.list.contacts > .item {
+  display: inline-flex;
+}
 .list.contacts > .item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 30px;
 }
 .studio-contacts.link {
   display: inline-flex;
   align-items: center;
 }
-.nav .studio-contacts.link::before {
+.studio-contacts.link::before {
   content: '';
   width: 20px;
   height: 20px;
-  margin: 2px 10px 2px 0px;
+  align-self: center;
+  margin-right: 10px;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -390,10 +399,10 @@ address {
 
   outline: 1px solid red;
 }
-.nav .studio-contacts.link-mail::before {
+.studio-contacts.link.mail::before {
   background-image: url('../images/icons/envelope.svg');
 }
-.nav .studio-contacts.link-phone::before {
+.studio-contacts.link.phone::before {
   background-image: url('../images/icons/smartphone.svg');
 }
 .section-title {
