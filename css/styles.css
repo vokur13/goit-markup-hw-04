@@ -75,15 +75,33 @@ address {
 }
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .link {
   text-decoration: none;
 }
-/* Параметры границы Header*/
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.title {
+  padding: 0;
+  margin: 0;
+}
+.section-title {
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+
 .brd {
   border-bottom: 1px solid var(--header-border-color);
 }
-/* Логотип */
 .studio-logo {
   color: var(--black-color);
   font-family: 'Raleway';
@@ -92,14 +110,9 @@ address {
   font-size: 26px;
   line-height: 1.19;
 }
-/* Стиль дополнительного цвета логотипа */
 .web-effect {
   color: var(--accent-color);
-  /* Header */
 }
-/* Псевдоклассы состояния - Активируется когда курсор мыши находится в пределах элемента, 
-например при наведении мыши на ссылку или любой другой элемент. 
-Текст контактов в хедере и футере меняет цвет при ховере и фокусе. */
 .header .link.contacts {
   color: var(--primary-text-color);
   font-style: normal;
@@ -126,130 +139,6 @@ address {
 }
 .nav .item-nav:not(:last-child) {
   margin-right: 50px;
-}
-/* Principal section */
-.principal-section-title {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--white-color);
-}
-.order-button {
-  background: var(--accent-color);
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: var(--white-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-}
-.section-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  color: var(--title-text-color);
-}
-.section-title.visually-hidden,
-.portfolio-title.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-/* Features */
-.features .title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-  color: var(--title-text-color);
-}
-.features-p-style {
-  line-height: 1.71;
-}
-/* Our Team */
-.section.team {
-  background-color: var(--background-color);
-}
-.team .title {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.18;
-  color: var(--title-text-color);
-}
-.team.list > .item {
-  background: var(--basic-backgroud-color);
-}
-.team-unit {
-  font-size: 16px;
-  line-height: 1.18;
-}
-
-/* Projects Portfolio */
-.projects .title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: var(--title-text-color);
-}
-.projects .project-unit {
-  font-size: 16px;
-  line-height: 1.88;
-  color: var(--primary-text-color);
-}
-/* Projects Filter Buttons */
-.filter-button {
-  background-color: rgba(245, 244, 250, 1);
-  border: none;
-  border-radius: 4px;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  text-align: center;
-  color: var(--title-text-color);
-  cursor: pointer;
-}
-.filter-button:hover,
-.filter-button:focus {
-  background: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  text-align: center;
-  color: var(--white-color);
-}
-/* Геометрия и позиционирование элементов */
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.list {
-  padding: 0;
-  margin: 0;
-}
-.title {
-  padding: 0;
-  margin: 0;
 }
 .header {
   padding-top: 24px;
@@ -294,17 +183,35 @@ address {
 .item.contacts .link-icon {
   margin-right: 10px;
 }
-.section-title {
-  padding: 0;
-  margin: 0;
+
+/* Principal section - Hero */
+
+.principal-section-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white-color);
 }
-.features-p-style {
-  padding: 0;
-  margin: 0;
-}
-.team-unit {
-  padding: 0;
-  margin: 0px 0px 16px 0px;
+.order-button {
+  background: var(--accent-color);
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 32px;
 }
 .principal-section {
   padding: 200px 0px;
@@ -323,13 +230,39 @@ address {
 .principal-section .container {
   text-align: center;
 }
-.order-button {
-  align-items: center;
-  text-align: center;
-  display: inline-block;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 32px;
+
+/* Features - Наши преимущества*/
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  color: var(--title-text-color);
+}
+.section-title.visually-hidden,
+.portfolio-title.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.features .title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--title-text-color);
+}
+.features-p-style {
+  line-height: 1.71;
+  padding: 0;
+  margin: 0;
 }
 .section.features {
   padding-top: 99px;
@@ -380,6 +313,27 @@ address {
 }
 .profile .section-title {
   margin-bottom: 50px;
+}
+
+/* Our Team */
+
+.section.team {
+  background-color: var(--background-color);
+}
+.team .title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  color: var(--title-text-color);
+}
+.team.list > .item {
+  background: var(--basic-backgroud-color);
+}
+.team-unit {
+  font-size: 16px;
+  line-height: 1.18;
+  padding: 0;
+  margin: 0px 0px 16px 0px;
 }
 .section.team {
   padding-top: 94px;
@@ -451,6 +405,7 @@ address {
 .link.social-netwrk:hover {
   fill: var(--white-color);
 }
+
 /* Our Clients */
 
 .section.clients {
@@ -579,6 +534,43 @@ address {
 
 /* Portfolio */
 
+.projects .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+}
+.projects .project-unit {
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--primary-text-color);
+}
+.filter-button {
+  background-color: rgba(245, 244, 250, 1);
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  color: var(--title-text-color);
+  cursor: pointer;
+}
+.filter-button:hover,
+.filter-button:focus {
+  background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  color: var(--white-color);
+}
 .portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
