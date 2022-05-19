@@ -77,6 +77,7 @@ address {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
 }
 .link {
   text-decoration: none;
@@ -395,10 +396,11 @@ address {
   margin-right: 10px;
 }
 .link.social-netwrk {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
-  padding: 12px;
   border-radius: 50%;
   color: var(--icon-color);
   fill: currentColor;
@@ -424,22 +426,22 @@ address {
 .clients .section-title {
   margin-bottom: 50px;
 }
-.clients-list {
-  list-style: none;
+.clients.list {
   display: flex;
-  margin: 0;
-  padding: 0;
-  /* flex-wrap: wrap;
-  justify-content: space-between; */
+  justify-content: center;
 }
-.clients-list > .item {
-  padding: 0;
+.clients.list > .item {
+  width: 100%;
+}
+.clients.list > .item:not(:last-child) {
+  margin-right: 30px;
 }
 .clients-link {
-  display: block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
-  padding: 16px 32px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   cursor: pointer;
@@ -463,10 +465,9 @@ address {
   padding-bottom: 60px;
   background-color: var(--footer-bgc);
 }
-.footer.common.container {
+.common.container {
   display: flex;
-  margin: 0 auto;
-  padding: 0 15px;
+  align-items: baseline;
 }
 .footer .studio-contacts {
   font-style: normal;
@@ -478,6 +479,9 @@ address {
   color: var(--white-color);
   display: inline-block;
   margin-bottom: 20px;
+}
+.common.addres {
+  display: inline-flex;
 }
 .address-item:not(:last-child) {
   margin-bottom: 9px;
@@ -493,7 +497,7 @@ address {
   line-height: 1.71;
   color: var(--white-color);
 }
-.suscribe {
+/* .suscribe {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--white-color);
@@ -506,19 +510,22 @@ address {
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: var(--white-color);
-}
+} */
 .common.container .address {
   margin-right: 70px;
 }
-.follow-container {
+/* .follow-container {
   display: block;
-}
+} */
 .follow-us {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
   color: var(--basic-backgroud-color);
+}
+.follow .list.social-netwrk {
+  display: flex;
 }
 .follow .list.social-netwrk {
   margin-top: 20px;
