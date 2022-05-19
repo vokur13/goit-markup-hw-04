@@ -21,10 +21,11 @@
   </head>
 
   <body>
+    <!-- Header -->
+
     <header class="header">
-      <nav class="nav">
-        <!--Навигация на другие страницы-->
-        <div class="intro container">
+      <div class="intro container">
+        <nav class="nav">
           <a class="studio-logo link" href="./index.html"
             ><span class="web-effect">Web</span>Studio</a
           >
@@ -32,36 +33,37 @@
             <li class="item-nav">
               <a class="studio-nav link current" href="./index.html">Студия</a>
             </li>
+
             <li class="item-nav">
               <a class="studio-nav link" href="./portfolio.html">Портфолио</a>
             </li>
             <li class="item-nav"><a class="studio-nav link" href="">Контакты</a></li>
           </ul>
-          <ul class="list contacts">
-            <li class="item contacts">
-              <a href="mailto:info@devstudio.com" class="link contacts" aria-label="mailto:">
-                <span class="visually-hidden">Mail to</span>
-                <svg class="link-icon envlp" width="16px" height="12px">
-                  <use href="./images/svg/webstudio-icons-optimized.svg#icon-envelope"></use></svg
-                >info@devstudio.com
-              </a>
-            </li>
+        </nav>
 
-            <li class="item contacts">
-              <a href="tel:+380961111111" class="link contacts" aria-label="phone:">
-                <span class="visually-hidden">Call to</span>
-                <svg class="link-icon smrtphone" width="10px" height="16px">
-                  <use href="./images/svg/webstudio-icons-optimized.svg#icon-smartphone"></use></svg
-                >+38 096 111 11 11
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+        <ul class="list contacts">
+          <li class="item contacts">
+            <a href="mailto:info@devstudio.com" class="link contacts pseudo">
+              <svg class="link-icon envlp" width="16px" height="12px">
+                <use href="./images/svg/webstudio-icons-optimized.svg#icon-envelope"></use></svg
+              >info@devstudio.com
+            </a>
+          </li>
+
+          <li class="item contacts">
+            <a href="tel:+380961111111" class="link contacts pseudo">
+              <svg class="link-icon smrtphone" width="10px" height="16px">
+                <use href="./images/svg/webstudio-icons-optimized.svg#icon-smartphone"></use></svg
+              >+38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
 
     <main>
-      <!--Уникальный контент страницы-->
+      <!-- Principal Section - Hero -->
+
       <section class="principal-section overlay">
         <div class="container">
           <!--Рекламный баннер и афиша (блок-герой)-->
@@ -73,10 +75,11 @@
         </div>
       </section>
 
+      <!-- Features - Преимущества -->
+
       <section class="section features">
         <div class="container upper">
           <h2 class="section-title visually-hidden">Наши преимущества</h2>
-          <!--Наши преимущества, скрытый заголовок-->
           <ul class="features list">
             <li class="item antenna">
               <div class="container-features">
@@ -126,6 +129,8 @@
         </div>
       </section>
 
+      <!-- Prifile -->
+
       <section class="profile">
         <div class="tools container lower">
           <h2 class="section-title">Чем мы занимаемся</h2>
@@ -146,10 +151,11 @@
         </div>
       </section>
 
+      <!-- Our Team -->
+
       <section class="section team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
-          <!--Наша команда-->
 
           <ul class="team list">
             <li class="item">
@@ -382,6 +388,9 @@
           </ul>
         </div>
       </section>
+
+      <!-- Our Clients -->
+
       <section class="section clients">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>

@@ -96,11 +96,27 @@ address {
   padding: 0;
   margin: 0;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /* Header */
 
 .brd {
   border-bottom: 1px solid var(--header-border-color);
+}
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .studio-logo {
   color: var(--black-color);
@@ -113,16 +129,15 @@ address {
 .web-effect {
   color: var(--accent-color);
 }
-.header .link.contacts {
-  color: var(--primary-text-color);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+.nav {
+  display: flex;
 }
-.header .link.contacts:hover,
-.header .link.contacts:focus {
-  color: var(--accent-color);
+.nav .list-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: 93px;
+  padding: 0;
 }
 .studio-nav {
   color: var(--title-text-color);
@@ -140,19 +155,9 @@ address {
 .nav .item-nav:not(:last-child) {
   margin-right: 50px;
 }
-.header {
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
 .intro.container {
   display: flex;
   align-items: center;
-}
-.nav .list-nav {
-  list-style: none;
-  display: flex;
-  margin-left: 93px;
-  padding: 0;
 }
 .list.contacts {
   display: flex;
@@ -168,20 +173,21 @@ address {
   padding: 0;
   align-items: center;
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.contacts.pseudo {
+  color: var(--primary-text-color);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 .item.contacts .link-icon {
   margin-right: 10px;
+  fill: currentColor;
+}
+.contacts.pseudo:hover,
+.contacts.pseudo:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* Principal section - Hero */
@@ -223,8 +229,10 @@ address {
   margin-left: auto;
   margin-right: auto;
 
-  background-image: linear-gradient(to right, #2f303a66, #2f303a66), url('../images/banner/Img.jpg');
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/banner/Img.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 .principal-section .container {
@@ -233,6 +241,10 @@ address {
 
 /* Features - Наши преимущества*/
 
+.section.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .section-title {
   font-weight: 700;
   font-size: 36px;
@@ -264,10 +276,6 @@ address {
   padding: 0;
   margin: 0;
 }
-.section.features {
-  padding-top: 99px;
-  padding-bottom: 99px;
-}
 .features.list {
   display: flex;
   flex-wrap: wrap;
@@ -290,10 +298,14 @@ address {
   width: 70px;
   height: 70px;
 }
-.features.list > .item .profile {
+
+/* Tools */
+
+.profile {
   padding-bottom: 94px;
 }
-.container.lower .section-title {
+.profile .section-title {
+  margin-bottom: 50px;
   text-align: center;
 }
 .tools .list {
@@ -310,9 +322,6 @@ address {
 }
 .features.list .title {
   margin-bottom: 10px;
-}
-.profile .section-title {
-  margin-bottom: 50px;
 }
 
 /* Our Team */
@@ -378,6 +387,10 @@ address {
   width: fit-content;
   height: 44px;
 }
+.social-netwrk .link-icon {
+  width: 20px;
+  height: 20px;
+}
 .item.social-netwrk:not(:last-of-type) {
   margin-right: 10px;
 }
@@ -387,23 +400,16 @@ address {
   height: 44px;
   padding: 12px;
   border-radius: 50%;
+  color: var(--icon-color);
+  fill: currentColor;
 }
 .link.social-netwrk:hover,
 .link.social-netwrk:focus {
-  background-color: var(--accent-color);
+  color: var(--accent-color);
+  fill: var(--white-color);
 }
 .item.social-netwrk:not(:last-of-type) {
   margin-right: 10px;
-}
-.social-netwrk .link-icon {
-  width: 20px;
-  height: 20px;
-}
-.link.social-netwrk {
-  fill: var(--icon-color);
-}
-.link.social-netwrk:hover {
-  fill: var(--white-color);
 }
 
 /* Our Clients */
@@ -427,28 +433,34 @@ address {
   justify-content: space-between;
 }
 .clients-list > .item {
+  /* width: 170px;
+  height: 92px; */
+  padding: 0;
+  /* border: 1px solid var(--icon-color);
+  border-radius: 4px; */
+
+  /* color: var(--icon-color);
+  fill: currentColor; */
+}
+.clients-link {
+  display: block;
   width: 170px;
   height: 92px;
   padding: 16px 32px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   cursor: pointer;
+  color: var(--icon-color);
+  fill: currentColor;
+}
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
 }
 .clients.link-icon {
   width: 106px;
   height: 60px;
-}
-.clients-list > .item:hover,
-.clients-list > .item:focus {
-  border-color: var(--accent-color);
-  color: var(--accent-color);
-}
-.clients-list > .item {
-  fill: var(--icon-color);
-}
-.clients-list > .item:hover,
-.clients-list > .item:focus {
-  fill: var(--accent-color);
 }
 
 /* Footer */
